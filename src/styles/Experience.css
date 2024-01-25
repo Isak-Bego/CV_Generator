@@ -1,9 +1,35 @@
 .experience{
     background-color: rgb(224, 224, 224);
-    padding: 5px 1em; 
+    padding: 0.5em; 
+    margin-bottom: 1em; 
     border-left: solid 3px;
+    display:flex; 
+    justify-content: space-between;
 }
 
-.experience .infoField{
+.detail .infoField{
     margin-bottom: 0;
+    flex-grow: 1;
 }
+
+.deleteIconHolder img{
+    object-fit: contain;
+    cursor: pointer; 
+    width: 100%; 
+}
+
+.deleteIconHolder{
+    width: 20px; 
+    height: fit-content;
+    cursor: pointer; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em; 
+}
+
+.deleteIconHolder:hover{
+    background-color: white;
+    border-radius: 0.5em; 
+}
+
