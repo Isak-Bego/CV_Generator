@@ -34,7 +34,7 @@ export function getEducationalExperience(){
   }
 
 export function setEducationalExperience(updatedArray){
-    fullData.educationalExperience = updatedArray; 
+    fullData.educationalExperience.push(updatedArray); 
     localStorage.setItem("cvGeneratorData", JSON.stringify(fullData));
   }
 
@@ -43,7 +43,7 @@ export function getPracticalExperience(){
   }
 
 export function setPracticalExperience(updatedArray){
-    fullData.practicalExperience = updatedArray; 
+    fullData.practicalExperience.push(updatedArray); 
     localStorage.setItem("cvGeneratorData", JSON.stringify(fullData));
   }
 
