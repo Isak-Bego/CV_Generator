@@ -2,6 +2,7 @@
   max-width: 1280px;
   width: 100%; 
   display: flex; 
+  justify-content: space-between;
   margin: 0;
   padding: 2rem;
 }
@@ -18,5 +19,28 @@
 .Editor{
   width: 40%; 
   min-width: 300px; 
-  overflow-y: hidden;
+  height: 90vh;
+}
+
+.Preview{
+  width: 58%;
+  height: 90vh; 
+  background-color: white;
+  min-width: 300px; 
+  border-radius: 1em;
+}
+
+.Editor, .Preview{
+  overflow-y: scroll;
+  overflow-x: auto;
+}
+
+@media screen and (max-width: 600px) {
+    #root{
+      flex-direction: column;
+    }
+
+    .Editor, .Preview{
+      width: 100%;
+    }
 }

@@ -9,7 +9,7 @@ import WorkDetails from "./WorkDetails";
 import { useState } from "react";
 
 // eslint-disable-next-line react/prop-types
-function ExperienceSection({ type }) {
+function ExperienceSection({ type, toggleRenderPreview, renderPreview }) {
   let [addStatus, changeAddStatus] = useState(false);
   let [reRender, changeReRender] = useState(false);
   let addSection;
@@ -37,6 +37,7 @@ function ExperienceSection({ type }) {
       addPracticalExperience(newPracticalExperience);
       changeAddStatus(false);
     }
+    toggleRenderPreview(!renderPreview);
   };
 
   if (!addStatus) {
@@ -108,6 +109,8 @@ function ExperienceSection({ type }) {
           triggerReRender={() => {
             changeReRender(!reRender);
           }}
+          toggleRenderPreview={toggleRenderPreview}
+          renderPreview={renderPreview}
         />
         {addSection}
       </div>
@@ -121,6 +124,8 @@ function ExperienceSection({ type }) {
           triggerReRender={() => {
             changeReRender(!reRender);
           }}
+          toggleRenderPreview={toggleRenderPreview}
+          renderPreview={renderPreview}
         />
         {addSection}
       </div>

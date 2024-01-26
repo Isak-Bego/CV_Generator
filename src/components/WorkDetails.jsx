@@ -1,7 +1,7 @@
 import '../styles/Experience.css'
 import { getPracticalExperience, setPracticalExperience } from '../dataController';
 
-function WorkDetails({workXP, triggerReRender}){
+function WorkDetails({workXP, triggerReRender, toggleRenderPreview, renderPreview}){
     return(
         workXP.map((work) => {
             return (
@@ -17,6 +17,7 @@ function WorkDetails({workXP, triggerReRender}){
                                         return workX.companyName !== work.companyName;
                                     });
                         triggerReRender();
+                        toggleRenderPreview(!renderPreview);
                         setPracticalExperience(workXP);}
                     }>
                     <img src="../../public/delete-button.svg" alt="delete" />

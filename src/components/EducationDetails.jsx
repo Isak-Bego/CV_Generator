@@ -1,7 +1,7 @@
 import { getEducationalExperience, setEducationalExperience } from '../dataController';
 import '../styles/Experience.css'
 
-function EducationDetails({educationXP, triggerReRender}){
+function EducationDetails({educationXP, triggerReRender, toggleRenderPreview, renderPreview}){
     return(
         educationXP.map((education) => {
             return (
@@ -16,6 +16,7 @@ function EducationDetails({educationXP, triggerReRender}){
                                         return educationX.schoolName !== education.schoolName;
                                     });
                         triggerReRender();
+                        toggleRenderPreview(!renderPreview);
                         setEducationalExperience(educationXP);}
                     }>
                         <img src="../../public/delete-button.svg" alt="delete" />

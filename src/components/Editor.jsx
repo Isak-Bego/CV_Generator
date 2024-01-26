@@ -2,12 +2,13 @@ import PersonalInfo from './PersonalInfo.jsx'
 import ExperienceSection from './ExperienceSection.jsx'
 
 
-function Editor(){
+// eslint-disable-next-line react/prop-types
+function Editor({toggleRenderPreview, renderPreview}){
     return (
         <div className='Editor'>
-            <PersonalInfo/>
-            <ExperienceSection type="educational" />
-            <ExperienceSection type="practical" />
+            <PersonalInfo toggleRenderPreview={toggleRenderPreview} renderPreview={renderPreview}/>
+            <ExperienceSection type="educational" toggleRenderPreview={toggleRenderPreview} renderPreview={renderPreview}/>
+            <ExperienceSection type="practical" toggleRenderPreview={toggleRenderPreview} renderPreview={renderPreview}/>
         </div>
     );
 }

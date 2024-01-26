@@ -2,7 +2,8 @@ import { useState } from "react";
 import { getPersonalInformation, setPersonalInformation } from "../dataController";
 import '../styles/PersonalInfo.css'
 
-function PersonalInfo(){
+// eslint-disable-next-line react/prop-types
+function PersonalInfo({toggleRenderPreview, renderPreview}){
     let [editMode, setEditMode] = useState(false);
     const personalInfo = getPersonalInformation();
 
@@ -13,6 +14,7 @@ function PersonalInfo(){
         personalInfo.email = document.getElementById("email").value;
         personalInfo.phoneNumber = document.getElementById("phoneNumber").value; 
         setPersonalInformation(personalInfo); 
+        toggleRenderPreview(!renderPreview);
         setEditMode(false);
     }
 
