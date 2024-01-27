@@ -19,7 +19,7 @@ function EducationDetails({educationXP, triggerReRender, toggleRenderPreview, re
                         toggleRenderPreview(!renderPreview);
                         setEducationalExperience(educationXP);}
                     }>
-                        <img src="../../public/delete-button.svg" alt="delete" />
+                        <img src="/delete-button.svg" alt="delete" />
                     </div>
                 </div>
             );

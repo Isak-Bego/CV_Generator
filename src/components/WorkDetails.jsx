@@ -20,7 +20,7 @@ function WorkDetails({workXP, triggerReRender, toggleRenderPreview, renderPrevie
                         toggleRenderPreview(!renderPreview);
                         setPracticalExperience(workXP);}
                     }>
-                    <img src="../../public/delete-button.svg" alt="delete" />
+                    <img src="/delete-button.svg" alt="delete" />
                 </div>
             </div>
             );
